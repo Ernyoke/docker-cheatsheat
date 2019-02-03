@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  drupal:
+    image: drupal:8-apache
+    ports: 
+      - 8080:80
+    restart: always
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: example
+    restart: always
+
