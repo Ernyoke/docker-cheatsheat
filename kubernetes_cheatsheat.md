@@ -38,7 +38,7 @@
 
 ## Scale deployment
 
-`kubectl scale deployment/<name> --replicas=5
+`kubectl scale deployment/<name> --replicas=5`
 
 ## Expose local name/port - create a ClusterIP
 
@@ -65,5 +65,32 @@
 ### Create job - Output YAML
 
 `kubectl create job <job-name> --image <img-name> --dry-run -o yaml`
+
+## Declarative kubernetes
+
+### Apply
+
+`kubectl apply -f filename.yml`
+
+`kubectl apply -f filename.yml --dry-run`
+
+`kubectl apply -f filename.yml --server-dry-run`
+
+### API Resources
+
+`kubectl api-resources`
+
+### API Versions
+
+`kubectl api-versions`
+
+### Get all keys for each `kind`
+
+`kubectl explain services --recoursive`
+
+`kubectl explain services.spec`
+
+`kubectl explain services.spec.<spec-name>`
+
 
 
